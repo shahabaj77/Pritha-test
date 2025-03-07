@@ -1,0 +1,795 @@
+/* Container for the bulbs */
+.bulb-container {
+    position: fixed;
+    top: 0;
+	 justify-content: center;
+    display: flex;
+    gap: 250px;
+	width:100%;
+}
+
+/* Wire connecting bulbs */
+.wire {
+    position: relative;
+    width: 2px;
+    height: 30px;
+    background-color: gray;
+  right:40%;
+	transform:translate(-50%);
+}
+
+/* Bulb styles */
+.bulb {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: #444;
+    border-radius: 50%;
+ 
+	right:40%;
+	transform:translate(-50%);
+}
+
+/* Bulb ON effect with gradient glow */
+.bulb.on {
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    animation: gradientGlow 2s infinite alternate;
+}
+
+/* Gradient glowing animation */
+@keyframes gradientGlow {
+    0% { background: linear-gradient(45deg, red, yellow); box-shadow: 0px 0px 20px red; }
+    20% { background: linear-gradient(45deg, yellow, green); box-shadow: 0px 0px 25px yellow; }
+    40% { background: linear-gradient(45deg, green, blue); box-shadow: 0px 0px 30px green; }
+    60% { background: linear-gradient(45deg, blue, indigo); box-shadow: 0px 0px 25px blue; }
+    80% { background: linear-gradient(45deg, indigo, violet); box-shadow: 0px 0px 20px violet; }
+    100% { background: linear-gradient(45deg, violet, red); box-shadow: 0px 0px 30px red; }
+}
+
+ .container {
+            text-align: center;
+            transition: transform 2s ease-in-out;
+        }
+
+/* Heart shape */
+.heart {
+  
+    background-color: red;
+    height: 200px;
+    width: 200px;
+	
+    transform: translateX(50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+	margin-left:10px;
+    box-shadow: -10px 10px 90px red;
+	 transition: transform 2s ease-in-out;
+    animation: heart 0.6s linear infinite;
+}
+
+/* Heart animation */
+@keyframes heart {
+    0% { transform: rotate(-45deg) scale(1.1); }
+    50% { transform: rotate(-45deg) scale(1.0); }
+    100% { transform: rotate(-45deg) scale(1.1); }
+}
+
+/* Heart extra curves */
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: -10px -10px 90px red;
+}
+
+.heart::before {
+    top: -100px;
+    left: 0;
+}
+
+.heart::after {
+    left: 100px;
+    top: 0;
+}
+
+/* Heart button */
+.heart button {
+    background-color: pink;
+	 
+  
+    margin-left: 40px;
+    transform: translate(-10%, -10%) rotate(45deg);
+    color: black;
+    font-size: 10px;
+    border: 2px solid #007BFF;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 20%;
+    cursor: pointer;
+    z-index: 1000;
+	pointer-events: auto;
+	
+}
+
+/* Button hover effect */
+.heart button:hover {
+    background-color: #780C28;
+    color: white;
+}
+
+/* Smooth Scroll Effect */
+        .new-page {
+            width: 100%;
+            height: 100vh;
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         
+            font-size: 24px;
+            background-image: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+        
+
+/* Button container */
+.lights {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+	
+	width:100%;
+
+    top: 210px;
+}
+
+/* Lights button styling */
+.lights button {
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: lightgreen;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+	
+    opacity: 0;
+   
+    animation: dropDown 2s ease-out forwards;
+}
+
+/* Button hover effect */
+.lights button:hover {
+    background-color: lightgray;
+}
+
+/* Drop-down animation */
+@keyframes dropDown {
+    from {
+        opacity: 1;
+		top:0px;
+        transform: translateY(-390px);
+    }
+    to {
+        opacity: 1;
+		bottom:20px;
+        transform: translateY(0);
+    }
+}
+
+.lights button.show {
+    opacity: 1;
+    pointer-events: auto; /* Allow clicking after animation */
+}
+
+.birthday{
+	width:100%;
+	height:700px;
+
+display: flex;
+            justify-content: center;
+            align-items: center;
+           
+			background-image: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+     .stickers
+	 {margin-bottom:360px;}
+		 
+/* Import a cute and stylish font */
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@700&display=swap');
+
+.birthday-text {
+    font-family: 'Grandstander', cursive;/* A playful and lovable font */
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 360px;
+    color: #ffffff;
+    text-transform: uppercase;
+    
+    /* Smooth 3D Gradient Shadow */
+    text-shadow: 
+        2px 2px 0px #ff4d4d,  
+        4px 4px 0px #ff9933,  
+        6px 6px 0px #ffd633,  
+        8px 8px 0px #33cc33,  
+        10px 10px 0px #3399ff,  
+        12px 12px 0px #9933ff;
+
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: tilt 3s infinite alternate ease-in-out;
+}
+
+/* Smooth 3D Tilt Animation */
+@keyframes tilt {
+    0% {
+        opacity: 0;
+        transform: rotateY(-15deg) rotateX(10deg) scale(1);
+    }
+    50% {
+        transform: rotateY(15deg) rotateX(-10deg) scale(1.05);
+        text-shadow: 
+            2px 2px 0px #ff66b2,  
+            4px 4px 0px #ffcc66,  
+            6px 6px 0px #99ff66,  
+            8px 8px 0px #66ffcc,  
+            10px 10px 0px #6699ff,  
+            12px 12px 0px #cc66ff;
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(-15deg) rotateX(10deg) scale(1);
+    }
+}
+/* Firework burst */
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    opacity: 0;
+    animation: explode 1.8s ease-out forwards;
+}
+
+/* Sparks effect */
+.spark {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: red;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkMove 2.5s ease-out forwards;
+}
+
+/* Firework explosion effect */
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    20% {
+        transform: scale(2);
+        opacity: 1;
+    }
+	40% {
+        transform: scale(3);
+        opacity: 1;
+	}50% {
+        transform: scale(3);
+        opacity: 1;
+	}80% {
+        transform: scale(3);
+        opacity: 1;
+	}30% {
+        transform: scale(3);
+        opacity: 1;
+    }
+	70% {
+        transform: scale(3);
+        opacity: 1;
+    }
+	90% {
+        transform: scale(2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/* Sparks flying outward */
+@keyframes sparkMove {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x), var(--y));
+        opacity: 0;
+    }
+}
+
+		   .balloon-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .balloon {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            background: red;
+            border-radius: 190%;
+            bottom: 0px;
+            animation: float 8s infinite ease-in-out;
+        }
+
+        /* Add a string (wire) using ::before */
+        .balloon::before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 60px;
+            background: black;
+            left: 50%;
+            bottom: -60px;
+            transform: translateX(-50%);
+        }
+
+    /* Apply gradient colors to balloons */
+.balloon:nth-child(1) {
+    left: 10%;
+    background: linear-gradient(45deg, #ff0000, #ff9900);
+    animation-duration: 6s;
+}.balloon:nth-child(2) {
+    left: 15%;
+   background: linear-gradient(45deg, #00ffcc, #0099ff); /* Turquoise to Blue */
+    animation-duration: 5s;
+}.balloon:nth-child(3) {
+    left: 60%;
+background: linear-gradient(45deg, #ff9900, #ff6600); /* Orange to Deep Orange */
+    animation-duration: 8s;
+}.balloon:nth-child(4) {
+    left: 75%;
+background: linear-gradient(45deg, #cc00ff, #9900ff); /* Deep Purple to Violet */
+    animation-duration: 6s;
+}.balloon:nth-child(5) {
+    left: 45%;
+     background: linear-gradient(45deg, #66ff66, #33cc33); /* Lime Green to Dark Green */
+    animation-duration: 4s;
+}.balloon:nth-child(6) {
+    left: 55%;
+    background: linear-gradient(45deg, #ff0000, #ff9900);
+    animation-duration: 4s;
+}.balloon:nth-child(7) {
+    left: 66%;
+    background: linear-gradient(45deg, #ff0000, #ff9900);
+    animation-duration: 4s;
+}.balloon:nth-child(8) {
+    left: 60%;
+    background: linear-gradient(45deg, #ff0000, #ff9900);
+    animation-duration: 4s;
+}.balloon:nth-child(9) {
+    left: 10%;
+    background: linear-gradient(45deg, #ff0000, #ff9900);
+    animation-duration: 4s;
+}.balloon:nth-child(10) {
+    left: 78%;
+    background: linear-gradient(45deg, #ff0000, #ff9900);
+    animation-duration: 4s;
+}
+.balloon:nth-child(12) {
+    left: 86%;
+    background: linear-gradient(45deg, #9900cc, #ff66ff); /* Purple to Magenta */
+animation-duration: 6s;}
+
+
+
+
+.balloon:nth-child(14) {
+    left: 35%;
+    background: linear-gradient(45deg, #00ff00, #66ff66);
+    animation-duration: 6.6s;
+}.balloon:nth-child(15) {
+    left: 40%;
+    background:  linear-3.5radient(45deg, #9900cc, #ff66ff); /* Purple to Magenta */
+    animation-duration: 8s;
+}.balloon:nth-child(16) {
+    left: 55%;
+    background: linear-gradient(45deg, #00ff00, #66ff66);
+    animation-duration: 9s;
+}
+
+.balloon:nth-child(17) {
+    left: 90%;
+    background: linear-gradient(45deg, #ffcc00, #ffff00);
+    animation-duration: 7s;
+}.balloon:nth-child(18) {
+    left: 25%;
+       background: linear-gradient(45deg, #ff9900, #ff6600, #ff3300); /* Orange to Dark Orange to Deep Red */
+    animation-duration: 5s;
+}
+
+.balloon:nth-child(21) {
+    left: 75%;
+    background: linear-gradient(45deg, #9900cc, #ff66ff);
+    animation-duration: 7.5s;
+}.balloon:nth-child(22) {
+    left: 90%;
+  background: linear-gradient(45deg, #0000ff, #00ffff, #66ccff); /* Blue to Cyan to Light Blue */
+    animation-duration: 6.5s;
+}.balloon:nth-child(23) {
+    left: 65%;
+    background: linear-gradient(45deg, #ff0000, #ff9900, #ffcc33);
+    animation-duration: 7.5s;
+}
+
+/* Floating Keyframe Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    } 30% {
+        transform: translateY(-30);
+        opacity: 1;
+    } 50% {
+        transform: translateY(-50);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh); /* Move out of the screen */
+        opacity: 0;
+    }
+}
+		
+		      /* Cake Animation */
+        .cake {
+            position: absolute;
+            width: 200px;
+            height: 150px;
+            background: #f5c6a5;
+         
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            /* Hide initially */
+    opacity: 0;
+
+    /* Animation starts after 20s */
+    animation: drop 7s ease-in-out forwards;
+    animation-delay: 25s;
+        }
+
+        /* Cake base layers */
+        .layer {
+            width: 100%;
+            height: 50px;
+            background: #e07a5f;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        /* Top layer decoration */
+        .layer::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background: white;
+            bottom: 0;
+            border-radius: 10px;
+        }
+
+        /* Candles */
+        .candles {
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            top: -20px;
+        }
+
+        .candle {
+            width: 10px;
+            height: 30px;
+            background: yellow;
+            border-radius: 3px;
+            position: relative;
+        }
+
+        /* Candle flames */
+        .candle::before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 12px;
+            background: orange;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            animation: flicker 0.5s infinite alternate ease-in-out;
+        }
+
+        /* Cake falling animation */
+        @keyframes drop {
+			
+            0% { transform: translateX(-50%) translateY(-100vh) scale(1.2);opacity:0; }
+            80% { transform: translateX(-50%) translateY(0) scale(1); }
+            90% { transform: translateX(-50%) translateY(-10px);opacity:1; }
+            100% { transform: translateX(-50%) translateY(0);opacity:1;}
+        }
+
+        /* Candle flame flickering */
+        @keyframes flicker {
+            0% { transform: translateX(-50%) scale(1); opacity: 1; }
+            100% { transform: translateX(-50%) scale(1.1); opacity: 0.8; }
+        }
+		
+		
+		
+h2{
+			margin-bottom:500px;
+            font-size: 60px;
+            font-weight: bold;
+              background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 5px rgba(255, 0, 150, 0.5), 4px 4px 10px rgba(0, 255, 255, 0.5);
+            text-transform: uppercase;
+            position: relative;
+            animation: glow 2s infinite alternate, moveWave 3s infinite;
+        }
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 20px #ff00ff; }
+            100% { text-shadow: 0 0 10px #fff, 0 0 20px #ff1493, 0 0 30px #ff1493; }
+        }
+        @keyframes moveWave {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }	
+.gallery {
+    display: flex;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(-45deg, #ff6b6b, #f06595, #845ef7, #5c7cfa);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.slider {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    margin-top:100px;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: autoRun 40s linear infinite;
+}
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.item {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    transform-origin: center;
+    transform: rotateY(calc(var(--position) * (360deg / var(--quantity)))) translateZ(400px);
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+	
+	.birthday-card{
+		
+		height:700px;
+		background-color:#F9B7B7;
+		 display: flex;
+    justify-content: center;
+    align-items: center;
+		
+	}
+	.card{
+		margin-top:0px;
+		right:-30%;
+		position:relative;
+		width:400px;
+		height:450px;
+		border:10px solid #ef5050;
+		margin:60px auto 0 auto;
+		box-shadow:inset 10px 0px 15 px 0px rgba(0,0,0,0.1);
+		background-image:linear-gradient(to-bottom, rgba(255,255,255,0) ,rgba(255,255,255,0.5))
+		,url("https://sigmawire.net/i/03/5yvMr0.jpeg");
+		background-position:center;
+		background-size:cover;
+		background-repeat:no repeat;
+		 
+	.text{
+		width:90%;
+		height:91%;
+		font-family:'Playfair Display', serif;
+		
+		z-index: 5;
+	
+		background-position:center;
+		 
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Make the background blend with text */
+    background-clip: padding-box;
+ 
+    backdrop-filter: blur(15px);
+    background: url("https://sigmawire.net/i/03/5yvMr0.jpeg");
+	background-size:contain;
+    padding: 20px;
+	opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out;
+    
+		>p{
+			font-size:0.9em;
+			      color: #FF1493; /* Hot Pink text */
+			list-style:1.4;
+			line-height:1.2;
+			font-style:italic;
+			text-align:center;
+			margin:30px auto 0 auto;
+		 text-shadow: 
+        -1px -1px 0px #000, /* Dark outline */
+        1px -1px 0px #000,
+        -1px 1px 0px #000,
+        1px 1px 0px #000,
+        1px 1px 1.5px rgba(0, 0, 0, 0.2); /* Softer glow */
+		}
+		.title{
+			font-size:1.1em;
+			margin:20px auto 20px auto;
+			 color: #00FFFF; /* Neon Cyan */
+			    text-shadow: 
+        -1.5px -1.5px 0px #000, /* Dark outline */
+        1.5px -1.5px 0px #000,
+        -1.5px 1.5px 0px #000,
+        1.5px 1.5px 0px #000,
+        3px 3px 6px rgba(0, 225, 225, 0.2); /* Softer cyan glow */
+			  
+		}
+	}
+
+	.outer-cover{width:100%;
+	margin:-10px 0 0 -10px;
+	height:100%;
+	position:absolute;
+	border:10px solid #ef5050;
+	backface-visibility:hidden;
+	transform-style:preserve-3d;
+	transform-origin:0% 50%;
+	transform:perspective(800px) rotateY(0deg);
+	transition:all 0.8s ease-in-out;
+	
+	img{
+		box-shadow:0px 6px 11px 7px rgba(0,0,0,0.22);
+		border-radius:5px;
+	}
+}
+	
+	.coverinner{
+		position:absolute;
+		width:400px;
+		height:450px;
+		border:10px solid #ef5050;
+		background-color: #ef5050;
+		margin:-10px 0 0 -10px;
+		
+		filter:drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+		transform-style:preserve-3d;
+		
+		transform-origin:0% 50%;
+	transform:perspective(800px) rotateY(0deg);
+	transition:all 0.8s ease-in-out;
+	overflow:hidden;
+	
+	img{
+		transform:rotateY(170deg);
+	}
+	}
+	}
+	
+		
+	
+	
+	.card:hover{
+		.text{
+			opacity:1;
+		}
+		.outer-cover{
+			transform:perspective(800px) rotateY(-170deg);
+		}
+		.coverinner{
+			transform:perspective(800px) rotateY(-170deg);
+			box-shadow:7px 0 5px 0 rgba(0,0,0,0.3);
+			
+			
+		}
+	}
+	
+
+.sectionscon {
+  display: flex;
+  flex-direction: column;
+  height: 3000px; /* Adjust based on number of sections */
+ will-change: margin-top; /* Optimize animation */
+  animation: scrollAnimation 80s infinite ease-in-out;
+
+}
+
+
+
+/* Keyframe Animation */
+@keyframes scrollAnimation {
+  0%, 25% { margin-top: 0; }           /* Stop at Section 1 (10s) */
+  27.5%, 50% { margin-top: -700px; }   /* Stop at Section 2 (10s) */
+  52.5%, 75% { margin-top: -1400px; }  /* Stop at Section 3 (10s) */
+  77.5%, 100% { margin-top: -2200px; } /* Stop at Section 4 (10s), then loop */
+}
